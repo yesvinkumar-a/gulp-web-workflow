@@ -2,18 +2,21 @@
 
 WEB STARTER PROJECT USING GULP for
 
-**Main tasks:**
+## Main tasks:
+
 * HTML compiler
 * SASS compiler
 * JS module loader
 
-**Features:**
+## Features:
+
 * HTML Template engine using JADE
 * Sourcemaps for SASS & js
 * Browserify for javascript module loader
 * Different folder structure for *development* and *production* environments
 
-**Packages:**
+## Packages:
+
 * gulp  ([http://gulpjs.com/][3])
 * gulp-jade ([https://www.npmjs.com/package/gulp-jade][4])
 * gulp-browserify ([https://www.npmjs.com/package/gulp-browserify][5])
@@ -22,7 +25,7 @@ WEB STARTER PROJECT USING GULP for
 * gulp-if ([https://www.npmjs.com/package/gulp-if][8])
 * gulp-rename ([https://www.npmjs.com/package/gulp-rename][9])
 
-**Getting Started**
+## Getting Started
 
 * Install [Node.js][1]
 * Install Gulp globally
@@ -47,7 +50,7 @@ WEB STARTER PROJECT USING GULP for
 
    ```
 
-**License**
+## License
 
 The code is available under the [MIT License][2]
 
