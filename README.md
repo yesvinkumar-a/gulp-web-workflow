@@ -24,26 +24,31 @@ WEB STARTER PROJECT USING GULP for
 
 **Getting Started**
 
-1. Install [Node.js][1]
-2. Install Gulp globally
-   ~~~~
+* Install [Node.js][1]
+* Install Gulp globally
+   ```
    npm install -g gulp
-   ~~~~
-3. Download or clone this git repo
-   ~~~~
+
+   ```
+* Download or clone this git repo
+   ```
    git clone https://github.com/yesvinkumar-a/gulp-web-workflow.git
-   ~~~~
-4. Open the terminal for Mac OS, and git bash or cygwin for windows CLI
-5. Install Gulp dependencies
-   ~~~~
+
+   ```
+* Open the terminal for Mac OS, and git bash or cygwin for windows CLI
+* Install Gulp dependencies
+   ```
    npm install
-   ~~~~
-5. To run the tasks
-   ~~~~
+
+   ```
+* To run the gulp tasks
+   ```
    npm start
-   ~~~~
+
+   ```
 
 **License**
+
 The code is available under the [MIT License][2]
 
 [1]: https://nodejs.org/en/ "Nodejs"
