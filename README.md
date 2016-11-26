@@ -23,6 +23,7 @@ WEB STARTER PROJECT USING GULP for
 * gulp-rename ([https://www.npmjs.com/package/gulp-rename][9])
 
 **Getting Started**
+
 1. Install [Node.js][1]
 2. Install Gulp globally
    ~~~~
@@ -41,6 +42,7 @@ WEB STARTER PROJECT USING GULP for
    ~~~~
    npm start
    ~~~~
+
 **License**
 The code is available under the [MIT License][2]
 
