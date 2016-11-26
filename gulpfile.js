@@ -1,10 +1,11 @@
-var gulp        = require('gulp'),
-    jade        = require('gulp-jade'),
-    browserify  = require('gulp-browserify'),
-    sass        = require('gulp-sass'),
-    uglify      = require('gulp-uglify'),
-    gulpif      = require('gulp-if'),
-    rename      = require('gulp-rename');
+var gulp          = require('gulp'),
+    jade          = require('gulp-jade'),
+    browserify    = require('gulp-browserify'),
+    sass          = require('gulp-sass'),
+    uglify        = require('gulp-uglify'),
+    gulpif        = require('gulp-if'),
+    rename        = require('gulp-rename'),
+    connect       = require('gulp-connect')
 
 var env = process.env.NODE_ENV || 'development';
 var dir = 'builds/development';
@@ -20,7 +21,8 @@ gulp.task('jade', function(){
     .pipe(jade({
       pretty : env === 'development'
     }))
-    .pipe(gulp.dest(dir));
+    .pipe(gulp.dest(dir))
+    .pipe(connect.reload());
 })
 
 gulp.task('js', function() {
@@ -37,7 +39,8 @@ gulp.task('js', function() {
         }))
         .pipe(gulpif(env === 'production', uglify()))
         .pipe(rename('app.js'))
-        .pipe(gulp.dest(dir+"/js"));
+        .pipe(gulp.dest(dir+"/js"))
+        .pipe(connect.reload());
 });
 
 gulp.task('sass',function(){
@@ -54,7 +57,21 @@ gulp.task('sass',function(){
     .pipe(sass(config))
     .pipe(rename('app.css'))
     .pipe(gulp.dest(dir+"/css"))
+    .pipe(connect.reload());
 });
 
-gulp.task('default',['jade','js','sass']);
+gulp.task('connect', function() {
+  connect.server({
+    root: dir,
+    livereload: true
+  });
+});
+
+gulp.task('watch', function(){
+  gulp.watch('src/templates/partials/**/*.jade', ['jade'])
+  gulp.watch('src/js/**/*.js', ['js'])
+  gulp.watch('src/sass/**/*.scss', ['sass'])
+});
+
+gulp.task('default',['jade','js','sass','watch','connect']);
 //NODE_ENV=production gulp // for production
