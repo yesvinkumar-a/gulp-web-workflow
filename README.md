@@ -10,8 +10,8 @@ WEB STARTER PROJECT USING GULP for beginner CLI users
 
 ## Features:
 
-* HTML Template engine using JADE
-* Sourcemaps for SASS & js
+* JADE used as HTML Template engine
+* Source maps for SASS & js
 * Browserify for javascript module loader
 * Different folder structure for *development* and *production* environments
 
